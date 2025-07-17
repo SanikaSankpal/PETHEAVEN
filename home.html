@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetHeaven - People For Animals India Replica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        header {
+            background-color: rgba(240, 240, 240, 0.8);
+            padding: 20px;
+            text-align: center;
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Align items vertically */
+            justify-content: center; /* Center horizontally */
+        }
+
+        header .logo-container {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo-image {
+            width: 80px;
+            height: auto;
+            margin-right: 10px;
+        }
+        header .website-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-left: 10px; 
+            color: rgb(13, 13, 13);
+        }
+
+        nav {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            background-color: rgba(85, 85, 85, 0.8);
+        }
+
+        .hero {
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .hero .button {
+            display: inline-block;
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .section .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .section .grid-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section .grid-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 10px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .section {
+                padding: 30px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="image.png" alt="PetHeaven Logo" class="logo-image">
+        </div>
+        <span class="website-name">PETHEAVEN</span>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Empowering Compassion for Animals</h1>
+        <p>Unite for Paws: Spreading Love & Care for Every Pet in Need!</p>
+        <a href="index.html" class="button">join now</a>
+    </div>
+
+    <section class="section">
+        <h2>Our Mission</h2>
+        <p>Rescuing, Rehabilitating, and Protecting Pets in Need Across India.</p>
+        <div class="grid">
+            <div class="grid-item">
+                <img src="4.jpg" alt="Emergency Rescue">
+                <h3>Emergency Rescue</h3>
+                <p>Providing Immediate Care and Shelter for Animals in Need.</p>
+            </div>
+            <div class="grid-item">
+                <img src="3.jpg" alt="Pet Welfare & Protection">
+                <h3>Pet Welfare & Protection</h3>
+                <p>Ensuring Safe Shelter, Medical Care, and Loving Homes for Abandoned and Rescued Pets.</p>
+            </div>
+            <div class="grid-item">
+                <img src="2.jpg" alt="Awareness & Advocacy">
+                <h3>Awareness & Advocacy</h3>
+                <p>Educating Communities on Animal Welfare and Encouraging Responsible Pet Adoption.</p>
+            </div>
+            <div class="grid-item">
+                <img src="1.jpg" alt="Pet Rehabilitation Centers">
+                <h3>Pet Rehabilitation Centers</h3>
+                <p>Offering Safe Shelter, Medical Care, and Recovery Support for Injured and Abandoned Pets.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Make a Difference</h2>
+        <p>Your Support Helps Provide Shelter, Care, and a Better Future for Pets in Need.</p>
+    </section>
+
+    <footer>
+        <p>&copy;2025 PetHeaven. All Rights Reserved. 😊🐾</p>
+    </footer>
+
+</body>
+</html>

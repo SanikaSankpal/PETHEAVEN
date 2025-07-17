@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care | Pet Heaven</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F3E5F5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        nav {
+            background-color: rgba(230, 80, 70, 0.9); /* Original Coral */
+            width: 100%;
+            max-width: 1550px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+        }
+        .logo span {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 10px;
+            display: block;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        .header {
+            margin-top: 80px;
+            text-align: center;
+            padding: 20px;
+            background: #FFB400;
+            color: white;
+            width: 100%;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Content */
+        .content {
+            width: 80%;
+            background: white;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #6A0572; /* Violet */
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .basic-care {
+            background: #EAECEE;
+            border-left: 8px solid #3498DB;
+        }
+        .emergency {
+            background: #FDEDEC;
+            border-left: 8px solid #E74C3C;
+        }
+        .vaccination {
+            background: #FEF5E7;
+            border-left: 8px solid #F39C12;
+        }
+        .training {
+            background: #E8F8F5;
+            border-left: 8px solid #1ABC9C;
+        }
+        .safety {
+            background: #F5EEF8;
+            border-left: 8px solid #8E44AD;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="image.png" alt="Pet Heaven Logo">
+            <span>Pet Heaven</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="success_stories.html">Success Stories</a></li>
+            <li><a href="pet_care.html">Pet Care</a></li>
+            <li><a href="#" class="logout">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="header">
+        🐾 Pet Care Tips & Guides
+    </div>
+
+    
+    <div class="content">
+        <div class="section basic-care">
+            <h2>🐕 Basic Pet Care</h2>
+            <p>✔ Regular grooming to keep pets clean and healthy.</p>
+            <p>✔ Balanced diet tailored to age and breed.</p>
+            <p>✔ Daily exercise for overall well-being.</p>
+        </div>
+        <div class="section emergency">
+            <h2>🚑 Emergency Care</h2>
+            <p><b>Bleeding:</b> Apply pressure with a clean cloth.</p>
+            <p><b>Poisoning:</b> Avoid inducing vomiting—seek help.</p>
+            <p><b>Choking:</b> Carefully remove obstructions if possible.</p>
+        </div>
+        <div class="section vaccination">
+            <h2>💉 Vaccinations</h2>
+            <p>✔ Puppies need vaccines every 6-8 weeks.</p>
+            <p>✔ Annual check-ups to keep pets healthy.</p>
+            <p>✔ Rabies and distemper vaccines are essential.</p>
+        </div>
+        <div class="section training">
+            <h2>🎾 Training Tips</h2>
+            <p>✔ Basic commands improve safety.</p>
+            <p>✔ Socialization prevents behavioral issues.</p>
+            <p>✔ Positive reinforcement is key.</p>
+        </div>
+        <div class="section safety">
+            <h2>🏡 Pet Safety</h2>
+            <p>✔ Keep dangerous items and plants away.</p>
+            <p>✔ Create a safe indoor environment.</p>
+            <p>✔ Monitor pet health regularly.</p>
+        </div>
+    </div>
+
+</body>
+</html>

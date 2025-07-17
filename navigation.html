@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Heaven</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3ebe1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 200vh;
+            position: relative; 
+        }
+        nav {
+            background-color: white;
+            width: 100%;
+            max-width: 1550px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 60px;
+            width: 60px;
+            border-radius: 0;
+            vertical-align: middle;
+            margin-right: 10px;
+            image-rendering: smooth;
+        }
+        .logo span {
+            font-size: 1.8rem;
+            color: #333;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 20px;
+        }
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 12px;
+            display: block;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .logout {
+            background-color: #E63946;
+            padding: 12px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .image-section {
+            width: 100%;
+            margin-top: 80px;
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .content {
+            width: 100%;
+            text-align: center;
+            padding: 40px;
+            background-color: white;
+        }
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .view-pets { background-color: #6A0572; }
+        .post-pet { background-color: #E63946; }
+        .rescue-pet { background-color: #F4A261; color: black; }
+        .live-chat { background-color: #2A9D8F; }
+        .success-stories { background-color: #264653; }
+        .pet-care { background-color: #F4A261; }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        .back-button {
+            position: fixed; 
+            top: 10px; 
+            left: 10px; 
+            font-size: 1.5em; 
+            color: #ff6f61;
+            text-decoration: none;
+            z-index: 1000; 
+        }
+    </style>
+</head>
+<body>
+
+    <a href="javascript:history.back()" class="back-button">←</a>
+
+    <nav>
+        <div class="logo">
+            <img src="image.png" alt="Pet Heaven Logo">
+            <h1>PETHEAVEN</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="story.html">Success Stories</a></li>
+            <li><a href="care.html">Pet Care</a></li>
+            <li><a href="#" class="logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="image-section">
+        <img src="p1.png" alt="Pet Heaven Image">
+    </div>
+
+    <div class="content">
+        <h1>Welcome to PETHEAVEN</h1>
+        <p>Find a new friend or help a pet in need.</p>
+
+        <div class="buttons">
+            <a href="available.html" class="button view-pets">Available for Adoption ❤️</a>
+            <a href="petad.html" class="button post-pet">Post a Pet for Adoption</a>
+            <a href="emergency.html" class="button rescue-pet">Emergency Rescue 🚑</a>
+            <a href="feedback.html" class="button live-chat" onclick="toggleChat()">Your Feedback 📝</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy;2025 PETHEAVEN. All Rights Reserved. 😊🐾</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Pets for Adoption</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        
+        
+        nav {
+            background-color: rgba(255, 111, 97, 0.9);
+            width: 100%;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        
+        .title {
+            margin-top: 80px;
+            font-size: 2rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        
+        .pets-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+        }
+        .pet-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+        }
+        .pet-card img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .pet-card h3 {
+            margin: 10px 0;
+            color: #ff6f61;
+        }
+        .pet-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+        .adopt-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+        .adopt-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <nav>
+        <a href="index.html" class="logo">🐾 Pet Donation</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="title">
+        <h1>Available Pets for Adoption</h1>
+    </div>
+
+    
+    <div class="pets-container">
+        <div class="pet-card">
+            <img src="dog1.jpg" alt="Charlie">
+            <h3>Charlie</h3>
+            <p>Breed: Golden Retriever | Age: 3 years</p>
+            <a href="apply_adoption.html?pet=charlie" class="adopt-btn">Adopt Now</a>
+        </div>
+
+        <div class="pet-card">
+            <img src="dog2.jpg" alt="Bella">
+            <h3>Bella</h3>
+            <p>Breed: Labrador | Age: 2 years</p>
+            <a href="apply_adoption.html?pet=bella" class="adopt-btn">Adopt Now</a>
+        </div>
+
+        <div class="pet-card">
+            <img src="cat1.jpg" alt="Whiskers">
+            <h3>Whiskers</h3>
+            <p>Breed: Persian Cat | Age: 1.5 years</p>
+            <a href="apply_adoption.html?pet=whiskers" class="adopt-btn">Adopt Now</a>
+        </div>
+
+        <div class="pet-card">
+            <img src="dog3.jpg" alt="Rocky">
+            <h3>Rocky</h3>
+            <p>Breed: German Shepherd | Age: 4 years</p>
+            <a href="apply_adoption.html?pet=rocky" class="adopt-btn">Adopt Now</a>
+        </div>
+    </div>
+
+</body>
+</html>

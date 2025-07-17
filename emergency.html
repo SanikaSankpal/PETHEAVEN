@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Rescue 🚑</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: url('e.jpeg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: white;
+            padding: 20px;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: stretch;
+            width: 90%;
+            max-width: 1100px;
+            gap: 20px;
+        }
+        .info-section, .form-section {
+            flex: 1;
+            padding: 40px;
+            border-radius: 10px;
+            min-height: 450px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .info-section {
+            background: rgba(0, 0, 0, 0.85);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+        h2, h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+        .info-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .form-section {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1rem;
+        }
+        select {
+            color: black;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        .btn {
+            background: #ff6f61;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #e85b50;
+            transform: scale(1.05);
+        }
+        .file-upload {
+            text-align: left;
+            margin-top: 10px;
+        }
+        .preview-container {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .preview-container img {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="info-section">
+            <h2>🐾 First-Aid for Injured Pets</h2>
+            <p>🔹 <b>Bleeding:</b> Apply gentle pressure with a clean cloth.</p>
+            <p>🔹 <b>Fractures:</b> Keep the pet still & avoid movement.</p>
+            <p>🔹 <b>Burns:</b> Cool the area with clean water.</p>
+            <p>🔹 <b>Poisoning:</b> Do not induce vomiting, seek help.</p>
+            <p>🔹 <b>Shock Symptoms:</b> Weak pulse, pale gums – keep pet warm.</p>
+            <h2>📞 Emergency Vet Contacts</h2>
+            <p>Dr. Rahul Sharma - +91 98765 43210</p>
+            <p>Dr. Priya Mehta - +91 87654 32109</p>
+            <p>24/7 Animal Helpline - 1800-123-4567</p>
+        </div>
+        <div class="form-section">
+            <h1>Emergency Rescue 🚑</h1>
+            <p>If you find an animal in distress, please provide details below.</p>
+            <form action="rescue_request.php" method="POST" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="phone" placeholder="Contact Number" required>
+                <select name="emergency_type" required>
+                    <option value="">Select Emergency Type</option>
+                    <option value="injury">Injury</option>
+                    <option value="stray">Stray Animal</option>
+                    <option value="abandoned">Abandoned Pet</option>
+                    <option value="other">Other</option>
+                </select>
+                <textarea name="location" rows="3" placeholder="Location & Details" required></textarea>
+                <div class="file-upload">
+                    <label style="color: white;">Upload Images (Optional):</label>
+                    <input type="file" name="images[]" accept="image/*" multiple onchange="previewImages(event)">
+                    <div class="preview-container" id="preview-container"></div>
+                </div>
+
+                <button type="submit" class="btn">Request Rescue</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function previewImages(event) {
+            const previewContainer = document.getElementById('preview-container');
+            previewContainer.innerHTML = ''; 
+            const files = event.target.files;
+            
+            if (files.length > 3) {
+                alert("You can upload a maximum of 3 images.");
+                return;
+            }
+
+            for (let i = 0; i < files.length; i++) {
+                if (files[i].size > 5 * 1024 * 1024) { 
+                    alert("File size should not exceed 5MB.");
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    previewContainer.appendChild(img);
+                };
+                reader.readAsDataURL(files[i]);
+            }
+        }
+    </script>
+
+</body>
+</html>

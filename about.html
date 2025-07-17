@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People For Animals - Replica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-image {
+            width: 80px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .header-right {
+            display: flex;
+        }
+
+        .header-right a {
+            background-color: #ff6f61; /* Purple color */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: left;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .hero-text {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            padding: 20px;
+        }
+
+        .hero-text p {
+            margin-bottom: 15px;
+        }
+
+        .hero-text strong {
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .hero {
+                flex-direction: column;
+                padding: 50px 10px;
+            }
+
+            .hero-text {
+                width: 100%;
+                position: static;
+                transform: none;
+                margin-top: 20px;
+            }
+
+            .hero-image {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <div class="logo-container">
+                <img src="image.png" alt="People For Animals Logo" class="logo-image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <a href="#">Join Now</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-image">
+            <img src="h.jpg" alt="Animal Image">
+        </div>
+        <div class="hero-text">
+            <p>Compassion for Animals, Care for Our Future. Animal welfare is not just about pets—it’s about creating a kinder world for all. The way we treat animals impacts our communities, our environment, and future generations. Cruelty to animals affects society’s peace, human health, and the planet as a whole.</p>
+            <p>At PetHeaven, we are dedicated to rescuing, rehabilitating, and rehoming pets in need. Our mission is to provide medical care, safe shelters, and loving homes for abandoned and injured animals. We operate rescue services, adoption programs, vaccination and sterilization drives, and awareness campaigns to ensure every pet gets the love and care they deserve.</p>
+            <p>Join us in building a compassionate future—one pet at a time. 💙🐾</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 People For Animals. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

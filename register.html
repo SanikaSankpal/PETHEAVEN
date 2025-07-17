@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetHeaven - Register</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: url('p2.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: white;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .register-container {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px; /* Reduced padding */
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            max-width: 400px; /* Reduced max width */
+            width: 90%;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h2 {
+            font-size: 1.8rem; /* Slightly reduced font size */
+            font-weight: bold;
+            margin-bottom: 25px; /* Reduced margin */
+        }
+
+        .form-group {
+            margin-bottom: 15px; /* Reduced margin */
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 1rem; /* Slightly reduced font size */
+            margin-bottom: 5px; /* Reduced margin */
+            color: white;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 16px); /* Adjusted width for reduced padding */
+            padding: 10px; /* Reduced padding */
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            color: #333;
+            font-size: 0.9rem; /* Slightly reduced font size */
+        }
+        input::placeholder {
+            color: #777;
+            font-size: 0.9rem; /* Slightly reduced placeholder size */
+        }
+
+        .register-button {
+            background: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px; /* Reduced padding */
+            font-size: 1rem; /* Slightly reduced font size */
+            cursor: pointer;
+            border-radius: 30px;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            display: block;
+            margin-top: 15px; /* Reduced margin */
+        }
+        .register-button:hover {
+            background: #e85b50;
+            transform: scale(1.05);
+        }
+
+        .login-link {
+            display: block;
+            margin-top: 15px; /* Reduced margin */
+            font-size: 0.9rem; /* Slightly reduced font size */
+            color: #ccc;
+            text-decoration: none;
+        }
+        .login-link:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        .back-home {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9rem; 
+            color: #ccc;
+            text-decoration: none;
+        }
+        .back-home:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px); 
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="register-container">
+        <h2>Register</h2>
+        <form action="register.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+            </div>
+            <button type="submit" class="register-button">Register</button>
+        </form>
+        <a href="login.html" class="login-link">Already have an account? Log in</a>
+        <a href="index.html" class="back-home">Back to Home</a>
+    </div>
+
+</body>
+</html>

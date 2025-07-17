@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-image: url('https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .container {
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        button {
+            background: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #e05749;
+        }
+
+        a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+        }
+        
+        .back-button {
+            position: fixed; /* Position relative to the viewport (browser window) */
+            top: 10px; /* Adjust as needed */
+            left: 10px; /* Adjust as needed */
+            font-size: 1.5em; /* Adjust as needed */
+            color: #ff6f61;
+            text-decoration: none;
+            z-index: 1000; /* Ensure it's on top of other elements */
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="your_navigation_page.html" class="back-button">←</a>
+
+    <div class="container">
+        <h2>Pet Adoption Form</h2>
+        <form id="adoptionForm">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Contact Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <label for="petName">Pet Name:</label>
+            <input type="text" id="petName" name="petName" value="(Selected Pet Name)" readonly>
+
+            <label for="petType">Type of Pet:</label>
+            <select id="petType" name="petType" required>
+                <option value="Dog">Dog</option>
+                <option value="Cat">Cat</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="reason">Reason for Adoption:</label>
+            <textarea id="reason" name="reason" rows="3" required></textarea>
+
+            <label for="experience">Have you adopted a pet before?</label>
+            <select id="experience" name="experience" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>
+                <input type="checkbox" id="agree" required>
+                I agree to the terms and conditions.
+            </label>
+
+            <button type="submit">Submit Adoption Request</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("adoptionForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Your adoption request has been submitted!");
+        });
+    </script>
+</body>
+</html>
